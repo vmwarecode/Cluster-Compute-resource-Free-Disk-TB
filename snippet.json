@@ -1,0 +1,11 @@
+{"efa0bd46-436e-40ed-953e-48eb6e209531": {
+   "resourceKinds": [{
+      "resourceKindKey": "ClusterComputeResource",
+      "adapterKindKey": "VMWARE"
+   }],
+   "modificationTime": 1620299978940,
+   "name": "Cluster Free Disk",
+   "formula": "sum(${this, metric=diskspace|total_capacity, depth=1})/1024- sum(${this, metric=diskspace|total_usage, depth=1})/1024",
+   "description": "Cluster Compute resource Free disk TB",
+   "unitId": "tb"
+}}
